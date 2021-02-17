@@ -1,0 +1,126 @@
+{%extends "baseall.html"%}
+{%block content%}
+<div class="indexbody" id="indexbody" onclick="movetop()">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+    <h1>Thomas Gibson</h2>  
+    <h2>
+      <p id="typewrite"></p>
+    </h2>
+    </div>
+
+
+  
+<div type="button" id="workbutton" onclick="showwork();hideabout();hidecontact()" hidden>
+    <h1>Work</h1>
+</div>
+<div type="button" id="aboutbutton" onclick="showabout();hidework();hidecontact()" hidden>
+    <h1>About</h1>
+</div>
+<div type="button" id="contactbutton" onclick="showcontact();hidework();hideabout()" hidden>
+    <h1>Contact</h1>
+</div>
+<div class="block" id="workblock" hidden>  
+    <div class="col-lg-8" id="showandtell">
+                  <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="services__item">
+                              <div class="services__item__icon">
+                                  <img src="{{ url_for('static', filename='/assets/images/clip2.png') }}" style="width:90%;margin-left: 375%" alt="">
+                              </div>
+                              <h4>Inventory Cost Calculator For Skincare Line</h4>
+                              <p>This Python based inventory utilizes object oriented programming to track skin care products through their ingredients and is then accessed with a browser based UI using local storage to tally up the total cost of ingredients spent on each purchase.</p>
+                          <br>
+                              <a href="https://beesbutterinventory.herokuapp.com/" id="weblink" type="button" class="btn btn-primary">Website</a>
+                              <a href="https://github.com/Kapitolos/beesbutterinventory" id="gitlink" type="button" class="btn btn-primary">GitHub</a>
+                          <div class="usegrid">
+                              <div class="imagewrap1">
+                          <img src="{{ url_for('static', filename='/assets/images/Python.png') }}" style='width:100%'>
+                              </div>
+                              <div class="imagewrap2">
+                          <img src="{{ url_for('static', filename='/assets/images/trinity.png') }}" style='width:20%'>
+                              </div>
+                              <div class="imagewrap3">
+                          <img src="{{ url_for('static', filename='/assets/images/flask.png') }}" style='width:20%'>
+                              </div>
+                          </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="services__item">
+                              <div class="services__item__icon">
+                                  <img src="{{ url_for('static', filename='/assets/images/money.png') }}" style="width:75%;margin-left: 382%" alt="">
+                              </div>
+                              <h4>Text Invest</h4>
+                              <p>This was a little project to have my program monitor a requested stock using YFinance API and then send me a text via Twilio's API should that stock be ripe for buying or selling.</p>
+                              <br>
+                              <a href="https://github.com/Kapitolos/stocktexter" id="gitlink" type="button" class="btn btn-primary">GitHub</a>
+                              <br>
+                              <img src="{{ url_for('static', filename='/assets/images/Python.png') }}" style='width:50%'>
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="services__item">
+                            <div class="services__item__icon">
+                                <img src="{{ url_for('static', filename='/assets/images/transfer.png') }}" style="width:75%;margin-left: 382%" alt="">
+                            </div>
+                            <h4>Discord Bot</h4>
+                            <p>A virtual grandmother that hates swearing, can tell you about the weather and suggest some great dinner recipe's too!</p>
+                            <br>
+                            <a href="https://github.com/Kapitolos/Old-Ma-The-Discord-Bot" id="gitlink" type="button" class="btn btn-primary">GitHub</a>
+                            <br>
+                            <img src="{{ url_for('static', filename='/assets/images/Python.png') }}" style='width:50%'>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="services__item">
+                            <div class="services__item__icon">
+                                <img src="{{ url_for('static', filename='/assets/images/monitor.png') }}" style="width:75%;margin-left: 382%" alt="">
+                            </div>
+                            <h4>Arena Online</h4>
+                            <p>A RPG game hosted by Flask and playable in your browswer.</p>
+                            <br>
+                            <a href="https://github.com/Kapitolos/ArenaOnline" id="gitlink" type="button" class="btn btn-primary">GitHub</a>
+                            <br>
+                            <div class="usegrid">
+                                <div class="imagewrap1">
+                            <img src="{{ url_for('static', filename='/assets/images/Python.png') }}" style='width:100%'>
+                                </div>
+                                <div class="imagewrap2">
+                            <img src="{{ url_for('static', filename='/assets/images/trinity.png') }}" style='width:20%'>
+                                </div>
+                                <div class="imagewrap3">
+                            <img src="{{ url_for('static', filename='/assets/images/flask.png') }}" style='width:20%'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+<div id="aboutSection" class="aboutSection" hidden>
+    <img src="{{ url_for('static', filename='/assets/images/face.jpg') }}" style="width:25%">
+    <p>Originally from Nova Scotia Canada where I graduated Dalhousie University with a Bachelor Of Arts, I am currenlty<br>residing in Toronto
+    where I completed Udemy's Zero To Mastery courses for both Python and Web Development.<br>
+    </p>
+    <h3>Skillset</h3>
+    <p>Python/Flask/React/Javascript/CSS/HTML5</p>
+</div>
+<div id="contactpage" hidden>
+<table>
+<row class="contactlinks">
+    <div class='email'>
+    <a class="button" href="mailto:thomasmgibson@gmail.com" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/000000/email-open.png"/></a>
+    <br>
+    <span>thomasmgibson@gmail.com</span>
+    </div>
+    <div class="phone" type="button" href="tel:647-703-8664" target="_blank">
+    <a class="button" href="tel:647-703-8664" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" class='phonepic'/></a>
+    <br>
+    <span>647-703-8664</span>
+    </div>
+    </row>
+    </table>
+    </div>
+{%endblock%}
